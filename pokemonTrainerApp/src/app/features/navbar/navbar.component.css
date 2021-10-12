@@ -1,0 +1,6 @@
+@import '~mdb-ui-kit/css/mdb.min.css';
+
+.icon {
+    width: 60px;
+    height: auto;
+}
