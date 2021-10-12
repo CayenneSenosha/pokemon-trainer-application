@@ -7,6 +7,7 @@ import { HomepageComponent } from './features/homepage/homepage.component';
 import { NavbarComponent } from './features/navbar/navbar.component';
 import { FavoritesComponent } from './features/favorites/favorites.component';
 import { ViewerComponent } from './features/viewer/viewer.component';
+import { SidenavComponent } from './features/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ViewerComponent } from './features/viewer/viewer.component';
     HomepageComponent,
     NavbarComponent,
     FavoritesComponent,
-    ViewerComponent
+    ViewerComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
