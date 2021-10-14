@@ -1,0 +1,6 @@
+@import '~mdb-ui-kit/css/mdb.min.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.error{
+    color: red;
+}

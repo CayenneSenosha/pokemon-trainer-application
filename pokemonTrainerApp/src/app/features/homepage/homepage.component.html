@@ -1,2 +1,22 @@
-<app-navbar></app-navbar>
-<app-sidenav></app-sidenav>
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="d-flex input-group w-auto">
+    <input type="text" formControlName="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+         (change)="onSearch($event)"/>
+    <span class="input-group-text border-0" id="search-addon">
+        <i class="fas fa-search"></i>
+    </span>
+</form>
+<div *ngIf="isLoading" >
+    <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="error" class="error">
+    {{error}}
+</div>
+<div *ngIf="data">
+    <p>{{data.name}}</p>
+    <p>{{data.weight}}</p>
+    <p>{{data.height}}</p>
+    <p>{{data.type}}</p>
+    <img [src]="data.sprites['back_default']">
+    <mat-icon (click)="addToFav(data)" aria-hidden="false" aria-label="Example heart icon">home</mat-icon>
+</div>
