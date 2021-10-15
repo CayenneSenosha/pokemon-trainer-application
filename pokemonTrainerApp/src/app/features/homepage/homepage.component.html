@@ -8,15 +8,23 @@
 <div *ngIf="isLoading" >
     <mat-spinner></mat-spinner>
 </div>
-
+<div *ngIf="selectedPokemon && !isLoading && !noDataFound"  >
+    <span>{{selectedPokemon.name}}</span>
+    <span>{{selectedPokemon.height}}</span>
+    <span>{{selectedPokemon.weigth}}</span>
+    <span>{{selectedPokemon.id}}</span>
+    <img [routerLink]="['pokemon',selectedPokemon.id]" [src]="selectedPokemon.sprites['back_default']" />
+    <mat-icon (click)="addToFav(selectedPokemon)" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+    <p *ngIf="favErrMsg != ''">{{favErrMsg}}</p>
+</div>
 <div *ngIf="error" class="error">
     {{error}}
 </div>
-<div *ngIf="data">
-    <p>{{data.name}}</p>
-    <p>{{data.weight}}</p>
-    <p>{{data.height}}</p>
-    <p>{{data.type}}</p>
-    <img [src]="data.sprites['back_default']">
-    <mat-icon (click)="addToFav(data)" aria-hidden="false" aria-label="Example heart icon">home</mat-icon>
+<div *ngIf="pokemons">
+    <div *ngIf="noDataFound">
+        No data found
+    </div>
+    <div *ngFor="let pokemon of pokemons">
+        <p (click)="pokemonClick(pokemon)">{{pokemon.name}}</p>
+    </div>
 </div>
