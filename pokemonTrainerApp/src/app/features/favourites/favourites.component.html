@@ -1,0 +1,6 @@
+<div *ngFor="let favourite of favourites ">
+    <div class="" (click)="gotToPokemon(favourite.value)">
+        <span>{{favourite.value.name}}</span>
+        <img [src]="favourite.value.sprites['back_default']"/>
+    </div>
+</div>

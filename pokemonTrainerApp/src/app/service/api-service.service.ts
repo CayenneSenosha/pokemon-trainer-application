@@ -24,5 +24,15 @@ export class ApiServiceService {
         return throwError(err);    //Rethrow it back to component
       }));
   }
+
+  getLimitPokemon(maxNumber: number = 151){
+    //https://pokeapi.co/api/v2/pokemon?limit=151
+    return this.http.get(this.apiUrl + `/api/v2/pokemon?limit=${maxNumber}`).pipe(
+      catchError((err) => {
+      console.log('error caught in api service getLimitPokemon()')
+      console.error(err);
+      return throwError(err);    //Rethrow it back to component
+    }));
+  }
 }
 
