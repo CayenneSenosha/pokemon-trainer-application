@@ -15,7 +15,7 @@
     </div>
     <img [routerLink]="['pokemon',selectedPokemon.id]" [src]="selectedPokemon.sprites['back_default']" />
     <mat-icon (click)="addToFav(selectedPokemon)" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-    <p *ngIf="favErrMsg != ''">{{favErrMsg}}</p>
+    <strong class="favErrMsg" *ngIf="favErrMsg != ''">{{favErrMsg}}</strong>
 </div>
 <div *ngIf="error" class="error">
     {{error}}
