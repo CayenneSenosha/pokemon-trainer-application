@@ -7,7 +7,6 @@ import { PokemonDetailsComponent } from './features/pokemon-details/pokemon-deta
 const routes: Routes = [{path:'favourite' , component:FavouritesComponent},
 {path:'pokemon/:id' , component:PokemonDetailsComponent},
 {path:'**' , component:HomepageComponent}];
-//HomepageComponent
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

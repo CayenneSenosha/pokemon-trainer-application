@@ -21,7 +21,7 @@ export class ApiServiceService {
         catchError((err) => {
         console.log('error caught in service')
         console.error(err);
-        return throwError(err);    //Rethrow it back to component
+        return throwError(err);  
       }));
   }
 
@@ -31,7 +31,7 @@ export class ApiServiceService {
       catchError((err) => {
       console.log('error caught in api service getLimitPokemon()')
       console.error(err);
-      return throwError(err);    //Rethrow it back to component
+      return throwError(err);  
     }));
   }
 }

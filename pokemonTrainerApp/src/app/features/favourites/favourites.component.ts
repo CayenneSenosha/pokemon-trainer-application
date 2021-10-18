@@ -23,5 +23,4 @@ export class FavouritesComponent implements OnInit {
     console.log(pokemon);
     this.router.navigateByUrl("pokemon/"+ pokemon.id)
   }
-
 }
