@@ -4,16 +4,19 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-left: 300px;
+    margin-left: 450px;
     box-shadow: 10px 10px 30px rgb(150, 148, 148);
     width: 50%;
     height: 50%;
 }
 
-.inner-frame span, h3 {
+.inner-frame span {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    color: gray;
+}
+
+.inner-frame h3 {
+    color:gray;
 }
