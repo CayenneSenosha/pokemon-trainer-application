@@ -1,6 +1,11 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand">Pokemon Trainer Application</a>
-        <img class="icon" src="../../../assets/icons/pokemon-icon.jpg"/>
+        <a routerLink="/" routerLinkActive="active">Home</a>
+        <a routerLink="/favourite" routerLinkActive="active">Favourites</a>
+        <a routerLink="/pokemon/:id" routerLinkActive="active">Pokemon Details</a>
+        <div class="icon" (click)="homeIcon()">
+            <img src="../../../assets/icons/pokemon-icon.jpg" href="/" />
+        </div>
     </div>
 </nav>

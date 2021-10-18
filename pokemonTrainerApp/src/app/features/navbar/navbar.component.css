@@ -1,6 +1,12 @@
 @import '~mdb-ui-kit/css/mdb.min.css';
 
-.icon {
+.container-fluid a {
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.icon img {
     width: 60px;
     height: auto;
 }
