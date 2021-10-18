@@ -5,22 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './features/homepage/homepage.component';
 import { NavbarComponent } from './features/navbar/navbar.component';
-import { ViewerComponent } from './features/viewer/viewer.component';
-import { SidenavComponent } from './features/sidenav/sidenav.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatIconModule} from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatIconModule } from '@angular/material/icon';
 import { FavouritesComponent } from './features/favourites/favourites.component';
 import { PokemonDetailsComponent } from './features/pokemon-details/pokemon-details.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     NavbarComponent,
-    ViewerComponent,
-    SidenavComponent,
     FavouritesComponent,
     PokemonDetailsComponent
   ],
@@ -31,7 +29,9 @@ import { PokemonDetailsComponent } from './features/pokemon-details/pokemon-deta
     HttpClientModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
-    MatIconModule
+    MatIconModule,
+    MatSidenavModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
