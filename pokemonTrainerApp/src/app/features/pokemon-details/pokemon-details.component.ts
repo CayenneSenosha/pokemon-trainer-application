@@ -32,6 +32,6 @@ export class PokemonDetailsComponent implements OnInit {
             console.log(data);
             this.pokemon = data;
         })
-    }
+    }console.log(this.pokemon );
   }
 }
